@@ -1,6 +1,8 @@
 import csv
 import datetime
 
+from google.colab import drive
+drive.mount('/content/drive')
 
 class Pizza:
     def __init__(self):
@@ -96,7 +98,7 @@ class CornSauce(PizzaDecorator):
 # Main function
 def main():
     # Print menu
-    with open("./menu.txt", 'r', encoding="utf-8") as menu_file:
+    with open('/content/drive/My Drive/Menu.txt', 'r') as menu_file:
         menu_text = menu_file.read()
         print(menu_text)
 
